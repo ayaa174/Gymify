@@ -1,0 +1,648 @@
+/* Start Variables */
+:root{
+    --main-color: white;
+    --main-font-size:17px;
+    --main-transation:all 0.3s;
+    --main-box-shadow: 0 0 5px .5px white;
+    --main-font-family: sans-serif;
+    --main-color-text:#e05034;
+    --main-border-radius:10px;
+}
+/* End Variables */
+
+/* Start Global Rules */
+*{
+    padding: 0;
+    margin: 0;
+    font-family: var(--main-font-family);
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* End Global Rules */
+
+
+
+
+
+
+/* Start SignUp And Login pages style */
+section .container .login h1{
+    margin-bottom: 30px;
+}
+section .container .signUp
+,section .container .login{
+    width: 400px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .signBox{
+    width: 95%;
+}
+section .container .signUp form
+,section .container .login form{
+    width: 400px;
+    height: 98%;
+    padding: 17px;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    box-shadow: var(--main-box-shadow);
+}
+section .container .signUp form label,section .container .signUp form input
+,section .container .login form label,section .container .login form input{
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    margin: 3px;
+    border: none;
+    transition: all 0.5s;
+    cursor: pointer;
+    display: inline-block;
+}
+section .container .signUp form input
+,section .container .login form input{
+    border-bottom: 1px solid #aaa;
+    background-color: transparent;
+}
+section .container .signUp form input[type="checkbox"]{
+    accent-color: var(--main-color-text);
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+#rememberLabel{
+    width: 80%;
+    color: #aaa;
+    font-size: 14px;
+    padding-left: 0;
+}
+section .container .login form input{
+    margin-bottom: 30px;
+}
+section .container .signUp form input:hover
+,section .container .login form input:hover{
+    cursor: text;
+}
+section .container .signUp form a .signBtn,section .container .signUp form a .loginBtn
+,section .container .login form a .signBtn,section .container .login form a .loginBtn{
+    width: 160px;
+    height: 40px;
+    border: none;
+    border-radius:10px ;
+    margin: 10px;
+    transition: var(--main-transation);
+    cursor: pointer;
+    font-size: 17px;
+    background-color: transparent;
+    color: black;
+}
+section .container .signUp form a .signBtn
+,section .container .login form a .signBtn{
+    background-color: var(--main-color-text);
+    color: var(--main-color);
+}
+section .container .signUp form a .signBtn:hover
+,section .container .login form a .signBtn:hover{
+    background-color: var(--main-color);
+    color: var(--main-color-text);
+    box-shadow: 0 0 12px var(--main-color-text);
+}
+section .container .signUp form a .loginBtn
+,section .container .login form a .loginBtn{
+    word-spacing: 12px;
+}
+section .container .signUp form a .loginBtn:hover
+,section .container .login form a .loginBtn:hover{
+    padding-left: 20px;
+}
+ /* End SignUp And Login pages style */
+
+
+
+
+
+
+/* Start Home page style */
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 1003;
+    background-color: white;
+}
+.header .container .nav{   
+    height: 80px;
+}
+.header .container .nav .logo{
+    font-size: 35px;
+    color: var(--main-color-text);
+    line-height: 80px;
+    padding: 0 20px;
+    font-weight: bold;
+}
+.header .container .nav ul{
+    float: right;
+}
+.header .container .nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+.header .container .nav ul li a{
+    color: var(--main-color-text);
+    font-size: var(--main-font-size);
+    text-transform: uppercase;
+    padding: 7px;
+    border-radius: 3px;
+}
+.header .container .nav ul li a.active,.header .container .nav ul li a:hover{
+    background-color: var(--main-color-text);
+    color: var(--main-color);
+    transition: 0,5s;
+}
+.header .container .nav .checkBtn{
+    color: var(--main-color-text);
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+section{
+    background-image: url(../images/fit.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    background-color: #304632;
+}
+section .overlay{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+}
+section .container{
+    position: absolute;
+    top:0;
+    left: 50%;
+    transform: translate(-50%);
+    height: 100%;
+}
+section .container .intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+section .container .intro p{
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--main-color);
+    margin: 0 5px;
+}
+section .container .intro  a button{
+    width: 180px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--main-color-text);
+    color: var(--main-color);
+    cursor: pointer;
+    font-size: 17px;
+    transition: 0.5s;
+    margin: 10px 5px;
+}
+section .container .intro  a button:hover{
+    background-color: var(--main-color);
+    color: var(--main-color-text);
+    box-shadow: 0 0 12px var(--main-color-text);
+}
+
+.about{
+    margin-top: 50px;
+    width: 100%;
+}
+.about .container{
+    width: 100%;
+}
+.about .container .parent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.about .container .parent div{
+    width: 90%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.about .container .parent div p,h2{
+    text-align: center;
+    margin: 5px 0;
+    
+}
+.about .container .parent div a button{
+    margin: 5px 0;
+    width: 180px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--main-color-text);
+    color: var(--main-color);
+    cursor: pointer;
+    font-size: 17px;
+    transition: 0.5s;
+}
+.about .container .parent div a button:hover{
+    background-color: var(--main-color);
+    color: var(--main-color-text);
+    box-shadow: 0 0 12px var(--main-color-text);
+}
+.about .container .parent div img{
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+}
+.services{
+    margin-top: 50px;
+    width: 100%;
+    height: 1200px;
+    background-color: #faf9f9;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.services .container .parent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.services .container .parent .servicesBox{
+    width: 90%;
+    height: 300px;
+    border-radius: 15px;
+    text-align: center;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--main-color-text);
+}
+.services .container .parent .servicesBox .icon{
+    color: var(--main-color-text);
+    font-size: 50px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.services .container .parent .background{
+    background-color: var(--main-color);
+    width: 100%;height: 100%;
+    transform: rotate(45deg);
+    transition: all .3s;
+    position: absolute;
+    top: 0;left: 0;
+    border-radius: 15px;
+}
+.services .container .parent .servicesBox .icon:hover .background{
+    transform: rotate(0);
+    background-color: var(--main-color-text);
+}
+.services .container .parent .servicesBox .icon:hover ion-icon{
+    color: var(--main-color);
+}
+.services .container .parent .servicesBox .icon ion-icon{
+    position: absolute;
+}
+
+.gallery{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 2000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gallery .container{
+    height: 100%;
+    width: 100%;
+}
+.gallery .container .parent{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.gallery .container .parent .child1{
+    width: 100%;
+    height: 50%; 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.gallery .container .parent .child1 .col1{
+    width: 33%;
+    height: 90%;
+    justify-content: space-evenly;
+}
+.gallery .container .parent .child1 .col2{
+    width: 57%;
+    height: 100%;
+    justify-content: space-between;
+}
+.gallery .container .parent .child1 .col1 .box1,.gallery .container .parent .child1 .col1 .box2,.gallery .container .parent .child1 .col2 .box{
+    width: 90%;
+    overflow: hidden;
+    transition: all 0.5s;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gallery .container .parent .child1 .col1,.gallery .container .parent .child1 .col2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gallery .container .parent .child1 .col1 .box1 img,.gallery .container .parent .child1 .col1 .box2 img,.gallery .container .parent .child1 .col2 img{
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.gallery .container .parent .child1 .col1 .box1{
+    height: calc(90% / 6);
+}
+.gallery .container .parent .child1 .col1 .box1 .r1,.gallery .container .parent .child1 .col1 .box2 .r2,.gallery .container .parent .child1 .col2 .box img{
+    height: 100%;
+}
+.gallery .container .parent .child1 .col1 .box2{
+    height: calc(90% / 3);
+}
+.gallery .container .parent .child1 .col2 .box{
+    height: calc(95% / 3);
+}
+.gallery .container .parent .child1 .col1 .box1:hover img,.gallery .container .parent .child1 .col1 .box2:hover img,.gallery .container .parent .child1 .col2 img:hover{
+    transform: scale(1.2);
+    filter: brightness(50%);
+}
+.gallery .container .parent .child2{
+    width: 100%;
+    height: 50%; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+.gallery .container .parent .child2 .r1{
+    width: 90%;
+    height: calc(90% / 3);
+    color: #e05034;
+    line-height: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.gallery .container .parent .child2 .r1 h1{
+    font-size: 35px;
+    line-height: 45px;
+    text-transform: capitalize;
+}
+.gallery .container .parent .child2 .r2{
+    width: 90%;
+    height: calc(90% / 1.5);
+    display: flex;
+    justify-content: space-between;
+}
+.gallery .container .parent .child2 .r2 .col1,.gallery .container .parent .child2 .r2 .col2{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.gallery .container .parent .child2 .r2 .col1 .box1,.gallery .container .parent .child2 .r2 .col1 .box2,
+.gallery .container .parent .child2 .r2 .col2 .box1,.gallery .container .parent .child2 .r2 .col2 .box2{
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+.gallery .container .parent .child2 .r2 .col1 .box1 img,.gallery .container .parent .child2 .r2 .col1 .box2 img,
+.gallery .container .parent .child2 .r2 .col2 .box1 img,.gallery .container .parent .child2 .r2 .col2 .box2 img{
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.gallery .container .parent .child2 .r2 .col1 .box1:hover img,.gallery .container .parent .child2 .r2 .col1 .box2:hover img,
+.gallery .container .parent .child2 .r2 .col2 .box1:hover img,.gallery .container .parent .child2 .r2 .col2 .box2:hover img{
+    transform: scale(1.2);
+    filter: brightness(50%);
+}
+.gallery .container .parent .child2 .r2 .col1 .box1,.gallery .container .parent .child2 .r2 .col2 .box1{
+    height: 59%;
+}
+.gallery .container .parent .child2 .r2 .col1 .box1 img,.gallery .container .parent .child2 .r2 .col1 .box2 img,
+.gallery .container .parent .child2 .r2 .col2 .box1 img,.gallery .container .parent .child2 .r2 .col2 .box2 img{
+    height: 100%;
+}
+.gallery .container .parent .child2 .r2 .col1 .box2,.gallery .container .parent .child2 .r2 .col2 .box2{
+    height: 39%;
+}
+
+.contactUs{
+    margin-top: 50px;
+    background-color: #faf9f9;
+    
+    color: var(--main-color);
+}
+.contactUs .container .parent{
+    width: 100%;
+    height: 250px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contactUs .container .parent ul{
+    text-align: center;
+}
+.contactUs .container .parent ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+}
+.contactUs .container .parent ul li a{
+    color: #524c4f;
+    transition: all .5s;
+}
+.contactUs .container .parent ul li a:hover{
+    color: var(--main-color-text);
+}
+.contactUs .container .parent .icons{
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+}
+.contactUs .container .parent .icons a{
+    display: inline-block;
+    margin: 10px;
+    padding: 2px;
+    color: var(--main-color-text);
+    transition: all 0.5s;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    line-height: 31px;
+}
+.contactUs .container .parent .icons a:hover{
+    background-color: var(--main-color-text) ;
+    color: white;
+}
+.contactUs .container .parent p{
+    color: #aaa;
+    padding: 10px;
+    font-size: 14px;
+}
+/* End Home page style */
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+    #navIcon{
+        display: block;
+    }
+    .header .container .nav .logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    .header .container .nav ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--main-color-text);
+        text-align: center;
+        transition: all 0.5s;
+    }
+    .header .container .nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    .header .container .nav .checkBtn{
+        display: block;
+    }
+    #check:checked ~ ul{
+        left: 0;
+        z-index: 1003;
+    }
+    .header .container .nav ul li a{
+        font-size: 20px;
+        color: var(--main-color);
+    }
+    .header .container .nav ul li a:hover{
+        background-color: var(--main-color);
+        color: var(--main-color-text);
+    }
+    section{
+        background-size: cover;
+    }
+    section .container .intro{
+        width: 400px;
+    }
+    .gallery .container .parent .child2 .r1{
+        line-height: 23px;
+    }
+    section .signBox{
+        width: 400px;
+        transform: translate(-53.5%);
+    }
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container{
+        width: 750px;
+        padding: 0 0px;
+    }
+    .header .container .nav ul li a{
+        font-size: 13px;
+    }
+    .about .container .parent div{
+        width: 45%;
+    }
+    .services{
+        height: 600px;
+    }
+    .services .container .parent .servicesBox{
+        width: 45%;
+    }
+    .gallery{
+        height: 1000px;
+    }
+    .gallery .container .parent .child1,.gallery .container .parent .child2{
+        width: 50%;
+        height: 100%;
+    }
+    .contactUs .container .parent ul li{
+        padding: 30px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container{
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+    .services{
+        height: 400px;
+    }
+    .services .container .parent .servicesBox{
+        width: calc(90% / 4);
+    }
+}
+/* End Home page style */
