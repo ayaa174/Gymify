@@ -31,7 +31,9 @@ html{
 /* End Global Rules */
 
 
-
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
 
 
@@ -75,13 +77,6 @@ section .container .signUp form input
     border-bottom: 1px solid #aaa;
     background-color: transparent;
 }
-section .container .signUp form input[type="checkbox"]{
-    accent-color: var(--main-color-text);
-    width: 10px;
-    height: 10px;
-    cursor: pointer;
-    margin-left: 15px;
-}
 #rememberLabel{
     width: 80%;
     color: #aaa;
@@ -94,6 +89,13 @@ section .container .login form input{
 section .container .signUp form input:hover
 ,section .container .login form input:hover{
     cursor: text;
+}
+section .container .signUp form input[type="checkbox"]{
+    accent-color: var(--main-color-text);
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    margin-left: 15px;
 }
 section .container .signUp form a .signBtn,section .container .signUp form a .loginBtn
 ,section .container .login form a .signBtn,section .container .login form a .loginBtn{
@@ -141,6 +143,9 @@ section .container .signUp form a .loginBtn:hover
     z-index: 1003;
     background-color: white;
 }
+.dark-mode .header{
+    background-color: black;
+}
 .header .container .nav{   
     height: 80px;
 }
@@ -150,6 +155,34 @@ section .container .signUp form a .loginBtn:hover
     line-height: 80px;
     padding: 0 20px;
     font-weight: bold;
+}
+.header .container .nav button {
+    padding: 3px 7px;
+    background-color: #e05034;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    float: right;
+    margin-top: 26px;
+}
+/* Dark Mode */
+.header .container .nav button.color {
+    background-color: black;
+}
+.header .container .nav button:hover {
+    background-color: black;
+}
+body.dark-mode {
+    background-color: black;
+    color: #f9f9f9;
+}
+.header .container .nav button .fa-moon
+,.header .container .nav button .fa-sun{
+    color: white;
+    font-size: 22px;
 }
 .header .container .nav ul{
     float: right;
@@ -260,7 +293,6 @@ section .container .intro  a button:hover{
 .about .container .parent div p,h2{
     text-align: center;
     margin: 5px 0;
-    
 }
 .about .container .parent div a button{
     margin: 5px 0;
@@ -292,6 +324,9 @@ section .container .intro  a button:hover{
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+.dark-mode .services{
+    background-color: #090808;
 }
 .services .container .parent{
     display: flex;
@@ -482,8 +517,10 @@ section .container .intro  a button:hover{
 .contactUs{
     margin-top: 50px;
     background-color: #faf9f9;
-    
     color: var(--main-color);
+}
+.dark-mode .contactUs{
+    background-color: #090808;
 }
 .contactUs .container .parent{
     width: 100%;
@@ -505,6 +542,9 @@ section .container .intro  a button:hover{
 .contactUs .container .parent ul li a{
     color: #524c4f;
     transition: all .5s;
+}
+.dark-mode .contactUs .container .parent ul li a{
+    color: white;
 }
 .contactUs .container .parent ul li a:hover{
     color: var(--main-color-text);
@@ -542,7 +582,7 @@ section .container .intro  a button:hover{
 
 
 
-
+/* Mobile */
 @media (max-width: 767px) {
     #navIcon{
         display: block;
@@ -561,6 +601,9 @@ section .container .intro  a button:hover{
         text-align: center;
         transition: all 0.5s;
     }
+    .dark-mode .header .container .nav ul{
+        background-color: black;
+    }
     .header .container .nav ul li{
         display: block;
         margin: 50px 0;
@@ -572,6 +615,12 @@ section .container .intro  a button:hover{
     #check:checked ~ ul{
         left: 0;
         z-index: 1003;
+    }
+    .header .container .nav button {
+        margin-right: -67px;
+        font-size: 20px;
+        padding: 1.5px 7px;
+        margin-top: 24.5px;
     }
     .header .container .nav ul li a{
         font-size: 20px;
